@@ -28,7 +28,7 @@ function App() {
     
         setText(event.target.value);
 
-      },[text, setText]);
+      },[setText]);
 
   function handleUpperCase(){
     isHapticOn();
@@ -45,6 +45,11 @@ function App() {
   function clearText(){
     isHapticOn();
     setText("");
+  }
+
+  function handleExtraSpaces(){
+      const mtxt = text.split(/[  ]+/);
+      setText(mtxt.join(" "));
   }
 
   return (
@@ -71,7 +76,7 @@ function App() {
           <button className="btn btn-primary mx-3 my-2" onClick={handleLowerCase}>lowercase</button>
           <button className="btn btn-primary mx-3 my-2">Title Case</button>
           <button className="btn btn-primary mx-3 my-2">Sentence case</button>
-          <button className="btn btn-warning mx-3 my-2">Remove Extra Spaces</button>
+          <button className="btn btn-warning mx-3 my-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
           <button className="btn btn-danger mx-3 my-2" onClick={clearText}>Clear Text</button>
         </div>
 

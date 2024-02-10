@@ -4,15 +4,15 @@ import isHapticOn from "../ishapticOn";
 // Bootstrap Navbar
 function Navbar() {
     
-    // function for dark mode
-    function handleDarkMode(event) {
+      // function for dark mode
+      function handleDarkMode(event) {
         isHapticOn();
         if(darmode === "light"){
             setDarMode("dark");
             setLableMsg("Enable Light Mode");
         }else{
             setDarMode("light");
-            setLableMsg("");
+            setLableMsg("Enable Dark Mode");
         }
         
         if(textmode === "dark"){

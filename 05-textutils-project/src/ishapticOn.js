@@ -1,3 +1,5 @@
+
+
 export default function isHapticOn(){
     if (navigator.vibrate) {
       // Use navigator.vibrate to create haptic effects
@@ -5,3 +7,13 @@ export default function isHapticOn(){
       
     }
   }
+
+
+
+
+
+
+
+
+
+
