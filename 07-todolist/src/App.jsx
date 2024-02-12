@@ -9,13 +9,12 @@ function App() {
   const [desc, setDesc] = useState("");
   const [originalTodo, setOriginalTodo] = useState([]);
   const [isOpenModal, setisOpenModal] = useState(false);
+  const [keyForEdit, setkeyForEdit] = useState(null);
 
   const handleChange = useCallback((e)=>{
           if(e.target.id === "title"){
-            console.log("it's title");
             setTitle(e.target.value);
           }else if(e.target.id === "desc"){
-            console.log("it's desc");
             setDesc(e.target.value);
           }
 
@@ -46,8 +45,11 @@ function App() {
   }
 
   // function for edit
-  function openModal(){
+  function openModal(key){
+      // console.log("Key is", key);
+      // console.log("Org todo :", originalTodo[key]);
       setisOpenModal(true);
+      setkeyForEdit(key);
   }
 
   function closeModal(){
@@ -64,7 +66,7 @@ function App() {
                   <h5 className="text-yellow-500"><span className='font-bold'>Description :</span> {item.desc}</h5>
                 </div>
                 <div className="p-3 rounded">
-                  <button onClick={()=>{HapticOn(); openModal();}} type="button" className="mx-3 my-1 py-1 px-2 bg-yellow-400 hover:bg-yellow-600 text-white rounded">Edit</button>
+                  <button onClick={()=>{HapticOn(); openModal(index);}} type="button" className="mx-3 my-1 py-1 px-2 bg-yellow-400 hover:bg-yellow-600 text-white rounded">Edit</button>
                   <button onClick={()=>{HapticOn(); removeItem(index);}} type="button" className="mx-3 my-1 py-1 px-2 bg-red-400 hover:bg-red-600 text-white rounded">Remove</button>
                 </div>
               </div>
@@ -91,7 +93,7 @@ function App() {
 
 
         <DisplayTodo render_var={renderTask}/>
-       <Modal visible={isOpenModal} close={closeModal}/>
+       <Modal visible={isOpenModal} close={closeModal} keyForEdit={keyForEdit} originalTodo={originalTodo} setOrgTodos={setOriginalTodo}/>
       </div>
 
 
