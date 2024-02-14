@@ -13,7 +13,7 @@ const Foreground = () => {
             isClose : true,
             tag : {
                 isOpen : true,
-                tagTitle : "File Downloaded",
+                tagTitle : "File Uploaded",
                 bgColor : "bg-blue-900/50"
             }
         },
