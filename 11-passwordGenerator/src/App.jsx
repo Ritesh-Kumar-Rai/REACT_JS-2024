@@ -8,6 +8,7 @@ function App() {
   const [password, setpassword] = useState("");
   const [isNumeric, setisNumeric] = useState(false);
   const [isSpecial, setisSpecial] = useState(false);
+  const [display, setdisplay] = useState(false);
   const pRef = useRef(null); // reference for input tags
 
 
@@ -18,6 +19,13 @@ function App() {
   function copyToClipboard(){
       window.navigator.clipboard.writeText(password);
       pRef.current?.select();
+
+      setdisplay(prev => !prev);
+
+      setTimeout(()=>{
+        setdisplay(prev => !prev);
+      },2000);
+
 
   }
 
@@ -35,7 +43,7 @@ function App() {
             
           }
           setpassword(pass);
-          
+
   },[length, isNumeric, isSpecial, setpassword]);
 
   // invoke useCallback function instantly when page loads
@@ -53,6 +61,7 @@ function App() {
           <div className='p-5 text-center'>
             <input type="text" value={password} className='w-3/4 h-7 p-5 pr-8 text-2xl bg-indigo-500 text-white border-2 border-indigo-950 rounded-lg' ref={pRef} readOnly/>
             <button type="button" className='relative -left-10 -top-1  text-lg px-1.5 m-2 rounded-lg' onClick={copyToClipboard} ><i className="ri-clipboard-line hover:text-white"></i></button>
+            <button className='bg-black text-white text-xs rounded-xl -ml-10  px-2 py-0.5 relative -top-1' style={{"display" : (display)? "inline-block":"none"}}>copied!</button>
           </div>
           <div className='p-5 flex text-2xl text-slate-100 justify-around items-center'>
             <div>
