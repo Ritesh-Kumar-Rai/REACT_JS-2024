@@ -1,6 +1,8 @@
 # Currency Converter
 
 
+## API USED
+
     const url = `https://api.exchangerate-api.com/v4/latest/${currency}`;
 
 # XMLHttpRequest API
@@ -21,7 +23,7 @@
     xhttp.open("GET", url, true);
     xhttp.send();
 
-    
+
 
 
 
