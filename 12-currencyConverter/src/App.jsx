@@ -46,7 +46,7 @@ function App() {
                         }}
                     >
                         <div className="w-full mb-1">
-                        <InputBox label="From" currency={from} OnCurrencyChange={(e)=>{ setFrom(e.target.value)}} currencyOptions={currencyOptions} amount={amount} OnAmountChange={(e)=>{ setAmount(e.target.value)}} />
+                        <InputBox label="From" currency={from} OnCurrencyChange={(e)=>{ setFrom(e.target.value)}} currencyOptions={currencyOptions} amount={amount} OnAmountChange={(e)=>{ setAmount(Number(e.target.value))}} />
                         </div>
                         <div className="relative w-full h-0.5">
                             <button
