@@ -65,6 +65,34 @@ function App() {
     setText(lowerstr);
   }
 
+
+  function handleTitleCase(){
+    isHapticOn();
+    // Use a regular expression that matches either a word, a whitespace, or a new line
+    const sentences = text.match(/\w+|\s|\n/g);
+    // Use a conditional operator to apply the title case function only to the words
+    const res =  sentences.map( (word) => word === "\n" || word === " " ? word : word[0].toUpperCase() + word.slice(1) );
+
+    // Join the words with an empty string, preserving the whitespaces and new lines
+    setText(res.join("")); 
+}
+
+
+function handleSentenceCase(){
+  isHapticOn();
+  // Use a regular expression that matches either a word, a whitespace, or a new line
+  const sentences = text.match(/\w+|\s|\n/g);
+  // Use a conditional operator to apply the sentence case function only to the first word of each sentence
+  const res =  sentences.map( (word, index) => index === 0 || sentences[index - 1] === "\n" ? word[0].toUpperCase() + word.slice(1) : word.toLowerCase() );
+
+  // Join the words with an empty string, preserving the whitespaces and new lines
+  setText(res.join("")); 
+  
+}
+
+
+
+
   function clearText() {
     isHapticOn();
     setText("");
@@ -100,8 +128,8 @@ function App() {
           </div>
           <button disabled={text.length===0} className="btn btn-primary mx-3 my-2" onClick={handleUpperCase}>UPPERCASE</button>
           <button disabled={text.length===0} className="btn btn-primary mx-3 my-2" onClick={handleLowerCase}>lowercase</button>
-          <button disabled={text.length===0} className="btn btn-primary mx-3 my-2">Title Case</button>
-          <button disabled={text.length===0} className="btn btn-primary mx-3 my-2">Sentence case</button>
+          <button disabled={text.length===0} className="btn btn-primary mx-3 my-2" onClick={handleTitleCase}>Title Case</button>
+          <button disabled={text.length===0} className="btn btn-primary mx-3 my-2" onClick={handleSentenceCase}>Sentence case</button>
           <button disabled={text.length===0} className="btn btn-warning mx-3 my-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
           <button disabled={text.length===0} className="btn btn-danger mx-3 my-2" onClick={clearText}>Clear Text</button>
         </div>
