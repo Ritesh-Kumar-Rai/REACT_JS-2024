@@ -1,0 +1,17 @@
+main {
+  min-height: 710.26px;
+}
+
+#theme-toggle-btn {
+  transition: transform 300ms ease;
+}
+#theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.no-post-heading {
+  margin-top: 20%;
+  font-size: 4rem;
+  font-family: fantasy;
+  text-shadow: 0px 0px 20px;
+}

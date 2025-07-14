@@ -1,0 +1,7 @@
+.error-message-container{
+    margin-block: 2cm;
+    background-color: rgba(240, 86, 86, 0.63);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+}

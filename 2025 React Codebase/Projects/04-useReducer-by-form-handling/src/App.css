@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid silver;
+  box-shadow: 0px 0px 50px var(--btn-background-color);
+  border-radius: 10px;
+}
+
+form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+span {
+  display: inline-block;
+  width: 60px;
+  color: var(--btn-color);
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}

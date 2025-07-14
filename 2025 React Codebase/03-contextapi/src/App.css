@@ -1,0 +1,16 @@
+#root {
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.container{
+  height: 80vh;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}

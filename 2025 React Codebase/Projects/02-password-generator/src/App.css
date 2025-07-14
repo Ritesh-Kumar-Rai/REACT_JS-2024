@@ -1,0 +1,56 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container{
+  max-width: 880px;
+  margin: 3cm auto;
+  text-align: center;
+  background-color: var(--button-bg);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 20px var(--shadow-color);
+  font-size: larger;
+  transition: border-color 0.25s;
+}
+
+.container:hover{
+  border-color: #646cff;
+}
+
+.flex{
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+.align-center{
+  place-items: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.form-control{
+  height: 100%;
+  width: 90%;
+  font-size: x-large;
+  padding: 5px;
+  outline-color: #646cff;
+  outline-color: silver;
+}
+
+.my-2{
+  margin-block: 2rem;
+}
+
+.gap-20px{
+  gap: 20px;
+}

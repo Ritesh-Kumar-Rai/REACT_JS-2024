@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+main {
+  margin-top: 1cm;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.news-card {
+  width: 600px;
+  aspect-ratio: 2/1;
+  max-height: 431.51px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: var(--btn-bg-color);
+  color: var(--color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.news-card > .img-container {
+  width: 100%;
+  height: fit-content;
+  max-height: 60%;
+  border: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.news-card > .img-container > img {
+  border: none;
+  background-position: center;
+  object-fit: cover;
+  height: 100%;
+}
+
+.news-card > .img-container > button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: var(--background-color);
+  color: var(--color);
+  border-radius: 5px;
+  padding: 6px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.news-card > .info-container {
+  min-height: 40%;
+  width: 100%;
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-card > .info-container > h3 {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.news-card > .info-container > p {
+  text-overflow: ellipsis;
+  max-height: 120px;
+  display: -webkit-box; /* Necessary for multi-line truncation */
+  -webkit-line-clamp: 4; /* Number of lines before truncation */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 25px 0px 0px 0px;
+}
+
+.news-card > .info-container > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 8px;
+  color: gray;
+}
+
+.loading-header {
+  font-family: fantasy;
+  font-size: 5rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 5cm;
+}
