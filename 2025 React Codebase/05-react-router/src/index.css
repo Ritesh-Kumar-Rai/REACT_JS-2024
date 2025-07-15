@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+#Layer_1 {
+  position: relative;
+  animation: mymove 2.5s infinite ease;
+}
+
+@keyframes mymove {
+  33% {
+    top: 0px;
+  }
+  66% {
+    top: -50px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
+  min-height: 5rem;
+}
+
+#grid-container > div {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
