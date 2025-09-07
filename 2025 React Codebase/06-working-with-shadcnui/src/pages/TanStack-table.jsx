@@ -1,8 +1,11 @@
+import BasicTable from '@/components/tanstack-table-uis/BasicTable';
 import React from 'react'
 
 const TanStackTable = () => {
     return (
-        <div>TanStack-table</div>
+        <div>
+            <BasicTable />
+        </div>
     )
 }
 
