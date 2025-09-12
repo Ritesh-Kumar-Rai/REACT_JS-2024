@@ -55,7 +55,7 @@ const BasicTable = () => {
 
     return (
         <section>
-            <h1>TanStack Table</h1>
+            <h1 className="text-4xl text-center font-bold">TanStack Table</h1>
             <table className="border shadow-lg" align="center" style={{ width: table.getTotalSize(), margin: 'auto', marginBlock: '2rem' }}>
                 <thead>
                     {table.getHeaderGroups().map((headerGroup) => (
@@ -67,9 +67,9 @@ const BasicTable = () => {
                 <tbody>
                     {
                         table.getRowModel().rows.map((row) => (
-                            <tr key={row.id}>
+                            <tr key={row.id} className="border-b">
                                 {row.getVisibleCells().map((cell) => (
-                                    <td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</td>
+                                    <td key={cell.id} className="py-1">{flexRender(cell.column.columnDef.cell, cell.getContext())}</td>
                                 ))}
                             </tr>
                         ))
