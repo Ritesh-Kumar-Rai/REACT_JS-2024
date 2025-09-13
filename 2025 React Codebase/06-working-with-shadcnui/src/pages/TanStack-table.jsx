@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 
 import Chapter1 from '@/components/tanstack-table-uis/Chapter1';
+import Chapter1A from '@/components/tanstack-table-uis/Chapter1A';
 
 const TanStackTable = () => {
 
@@ -34,6 +35,7 @@ const TanStackTable = () => {
                 {selectedChapter === '' && <BasicTable />}
                 <section className='p-4 my-4 rounded-2xl shadow-2xl'>
                     {selectedChapter === 'chapter1' && <Chapter1 />}
+                    {selectedChapter === 'chapter1a' && <Chapter1A />}
                 </section>
             </div>
         </>
