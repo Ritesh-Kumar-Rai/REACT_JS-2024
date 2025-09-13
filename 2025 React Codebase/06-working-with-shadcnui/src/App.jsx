@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
 
-        <main className='p-5 h-screen w-full border'>
+        <main className='p-5 min-h-screen w-full border'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/tanstack' element={<TanStackTable />} />
