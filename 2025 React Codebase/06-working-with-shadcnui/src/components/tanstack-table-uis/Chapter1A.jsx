@@ -55,7 +55,7 @@ const getColumns = (setState) => {
         },
         {
             id: 'delete',
-            header: 'Delete',
+            header: () => <div className='text-right'>Delete</div>,
             cell: ({ row }) => {
                 const deleteEntry = () => {
                     const id = row?.original?.id; // here we can't use row.getValue('id') because it will return undefined if we never defined accessorKey: 'id' in columns definition, the row.getValue() finds value from column definition not in data.
@@ -63,7 +63,7 @@ const getColumns = (setState) => {
                     // let's delete the specific data
                     setState((prev_entry) => prev_entry.filter((entry) => entry?.id !== id)); // This will return the rows or objects whose id is not matched with id variable..
                 };
-                return <Badge variant='destructive' style={{ cursor: 'pointer' }} onClick={deleteEntry}><Trash2 /></Badge>;
+                return <div className='text-right'><Badge variant='destructive' style={{ cursor: 'pointer' }} onClick={deleteEntry}><Trash2 /></Badge> </div>;
             },
             enableHiding: false,
             enableSorting: false,
