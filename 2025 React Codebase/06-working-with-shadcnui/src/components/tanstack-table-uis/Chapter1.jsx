@@ -69,7 +69,7 @@ const Chapter1 = () => {
 
     return (
         <>
-            <h1>Tanstack Chapter 1 Overview to Creating Columns, Rendering Rows/Columns & related methods: </h1>
+            <h1 className="text-center">Tanstack Chapter 1 Overview to Creating Columns, Rendering Rows/Columns & related methods: </h1>
             <p>The Tanstack table includes following hook and methods/features: </p>
             <div className="mx-2">
                 <ul className="list-disc">
@@ -128,7 +128,7 @@ const Chapter1 = () => {
                             ))
                             :
                             (<TableRow>
-                                <TableCell colSpan={columns.length} className="">
+                                <TableCell colSpan={columns.length} className="h-24 text-center">
                                     No results.
                                 </TableCell>
                             </TableRow>)}
