@@ -10,6 +10,7 @@ import {
 
 import Chapter1 from '@/components/tanstack-table-uis/Chapter1';
 import Chapter1A from '@/components/tanstack-table-uis/Chapter1A';
+import Chapter1B from '@/components/tanstack-table-uis/Chapter1B';
 
 const TanStackTable = () => {
 
@@ -26,6 +27,7 @@ const TanStackTable = () => {
                         <SelectItem value="intro">Introduction</SelectItem>
                         <SelectItem value="chapter1">Chapter 1</SelectItem>
                         <SelectItem value="chapter1a">Chapter 1A</SelectItem>
+                        <SelectItem value="chapter1b">Chapter 1B</SelectItem>
                         <SelectItem value="chapter2">Chapter 2</SelectItem>
                         <SelectItem value="chapter3">Chapter 3</SelectItem>
                     </SelectContent>
@@ -36,6 +38,7 @@ const TanStackTable = () => {
                 <section className='p-4 my-4 rounded-2xl shadow-2xl'>
                     {selectedChapter === 'chapter1' && <Chapter1 />}
                     {selectedChapter === 'chapter1a' && <Chapter1A />}
+                    {selectedChapter === 'chapter1b' && <Chapter1B />}
                 </section>
             </div>
         </>
