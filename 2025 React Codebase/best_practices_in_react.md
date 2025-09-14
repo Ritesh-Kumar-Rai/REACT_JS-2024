@@ -1,6 +1,6 @@
 # Best Practices in React JS
 
-### 1. Update State from Previous State
+## 1. Update State from Previous State
 
 - Every Time when you want to update the state from previous state use functional update method. Let me explain you with an example:
 
@@ -41,7 +41,7 @@ const saveTodo = (todoName, dueDate) => {
 
 The above optimised verion, we are going to directly update the state inside the setTodos() method inside it we are declaring anonymous callback function which will access the `current_state` as parameter and then we will update the state from that which leads to consistent data updation and very less chance of `failure` or `errors`.
 
-### 2. How to persist/update state over whole application without Re-rendering the components
+## 2. How to persist/update state over whole application without Re-rendering the components
 
 - In React, to store data in a variable we will generally prefer and store it to useState() hook which has many advantages and which is also recommended by `React Developers and Team`.
 
@@ -131,3 +131,69 @@ The above optimised verion, we are going to directly update the state inside the
   ```
 
   In the above, you can verify that "`useRef.current` retains it's value between renders, unlike regular variables, making it ideal for tracking mutable values without re-rendering".
+
+## 3 Difference between React.memo() & React.useMemo():
+
+Great question! `React.memo()` and `React.useMemo()` are both optimization tools in React, but they serve different purposes and are used in different contexts.
+
+---
+
+### **React.memo()**
+
+- **Purpose:**  
+  It’s a higher-order component (HOC) that wraps a component to prevent unnecessary re-renders when its props haven't changed.
+
+- **Usage:**  
+  Wrap a component to memoize it:
+
+  ```jsx
+  const MyComponent = React.memo(function MyComponent(props) {
+    // component code
+  });
+  ```
+
+- **When to use:**  
+  When you want to optimize a **whole component** and avoid re-rendering it if its props are the same.
+
+- **Behavior:**  
+  Performs a shallow comparison of props by default. You can pass a custom comparison function if needed.
+
+---
+
+### **React.useMemo()**
+
+- **Purpose:**  
+  It memoizes the **result of a calculation or function** — i.e., it caches a value so that expensive calculations are only re-computed when dependencies change.
+
+- **Usage:**  
+  Inside a component:
+
+  ```jsx
+  const computedValue = React.useMemo(() => {
+    // expensive computation
+    return result;
+  }, [dependencies]);
+  ```
+
+- **When to use:**  
+  When you want to **memoize a value or function** inside a component to prevent unnecessary re-computation.
+
+---
+
+### **Summary**
+
+| Aspect         | `React.memo()`                         | `React.useMemo()`                                          |
+| -------------- | -------------------------------------- | ---------------------------------------------------------- |
+| Type           | Higher-Order Component (HOC)           | Hook (inside a component)                                  |
+| Purpose        | Memoize entire component rendering     | Memoize a value or calculation result                      |
+| Usage scenario | Prevent re-rendering of a component    | Prevent re-computation of a value or function              |
+| Example        | `export default React.memo(Component)` | `const memoizedValue = React.useMemo(() => {...}, [deps])` |
+
+---
+
+### **In a nutshell:**
+
+- Use **`React.memo()`** to **wrap a component** and avoid re-rendering when props haven't changed.
+- Use **`React.useMemo()`** inside a component to **memoize a computed value** or function, optimizing performance for expensive calculations.
+
+---
