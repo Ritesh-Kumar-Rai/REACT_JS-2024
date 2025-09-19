@@ -85,7 +85,7 @@ const Chapter1A = () => {
 
     return (
         <>
-            <h1>Chapter 1A Convert Create a Table with React State as var, then perform delete operation on it</h1>
+            <h1>Chapter 1A Create a Table with React State as var(data), then perform delete operation on it</h1>
 
             <div className='my-4'>
                 <Table>

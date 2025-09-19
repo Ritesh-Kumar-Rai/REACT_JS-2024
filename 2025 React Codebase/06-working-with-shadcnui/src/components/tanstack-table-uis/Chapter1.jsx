@@ -43,7 +43,7 @@ const columns = [
     },
     {
         accessorKey: "amount",
-        header: () => <div className="text-right">Header</div>,
+        header: () => <div className="text-right">Amount</div>,
         cell: ({ row }) => {
             console.warn(row);
             const type = row?.original?.type;
