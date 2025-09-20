@@ -66,6 +66,9 @@ const Chapter1B = () => {
     });
 
     const sortingState = table?.getState().sorting;
+    console.log(table?.getState());// contains state also [which we can get by getState()]
+    console.log(table);// which contains setter methods also for state
+    // [So, to get a state use table.getState() and to modify the state use table.setterMethod(value) which changes the value of state]
 
     // table?.setSorting for modifying sorting state
 
