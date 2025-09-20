@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Badge } from '../ui/badge';
 import Chapter2a from './Chapter2a';
+import Chapter2b from './Chapter2b';
 
 const Chapter2 = () => {
 
@@ -25,6 +26,7 @@ const Chapter2 = () => {
             </div>
 
             {selected_module === 1 && <Chapter2a />}
+            {selected_module === 2 && <Chapter2b />}
         </>
     )
 }
