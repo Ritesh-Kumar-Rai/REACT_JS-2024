@@ -11,6 +11,7 @@ import {
 import Chapter1 from '@/components/tanstack-table-uis/Chapter1';
 import Chapter1A from '@/components/tanstack-table-uis/Chapter1A';
 import Chapter1B from '@/components/tanstack-table-uis/Chapter1B';
+import Chapter2 from '@/components/tanstack-table-uis/Chapter2';
 
 const TanStackTable = () => {
 
@@ -39,6 +40,7 @@ const TanStackTable = () => {
                     {selectedChapter === 'chapter1' && <Chapter1 />}
                     {selectedChapter === 'chapter1a' && <Chapter1A />}
                     {selectedChapter === 'chapter1b' && <Chapter1B />}
+                    {selectedChapter === 'chapter2' && <Chapter2 />}
                 </section>
             </div>
         </>
