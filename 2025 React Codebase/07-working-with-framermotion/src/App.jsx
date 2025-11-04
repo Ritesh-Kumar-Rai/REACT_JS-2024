@@ -1,13 +1,14 @@
 import { motion } from "motion/react";
 import './App.css';
 import { useState } from "react";
-import { Chapter1_Basics, Chapter2_Keyframes, Chapter3_HovertapEffect } from "./chapters";
+import { Chapter1_Basics, Chapter2_Keyframes, Chapter3_HovertapEffect, Chapter4_DragAnimate } from "./chapters";
 
 
 const chapters = {
   chapter1: <Chapter1_Basics motion={motion} />,
   chapter2: <Chapter2_Keyframes motion={motion} />,
-  chapter3: <Chapter3_HovertapEffect motion={motion} />
+  chapter3: <Chapter3_HovertapEffect motion={motion} />,
+  chapter4: <Chapter4_DragAnimate motion={motion} />,
 };
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <option value="chapter1">1 Framer Basics</option>
             <option value="chapter2">2 Framer keyframes animations</option>
             <option value="chapter3">3 Framer Hover & Tap Animate</option>
+            <option value="chapter4">4 Framer Drag/Drop</option>
           </select>
         </div>
 
