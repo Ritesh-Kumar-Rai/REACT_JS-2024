@@ -19,4 +19,10 @@ h1 {
   align-items: center;
   justify-content: center;
   font-weight: 500;
+  user-select: none;
+  will-change: transform;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

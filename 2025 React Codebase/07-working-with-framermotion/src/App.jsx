@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
 import './App.css';
 import { useState } from "react";
-import Chapter1_Basics from "./chapters/Chapter1_Basics";
-import Chapter2_Keyframes from "./chapters/Chapter2_Keyframes";
+import { Chapter1_Basics, Chapter2_Keyframes, Chapter3_HovertapEffect } from "./chapters";
+
 
 const chapters = {
   chapter1: <Chapter1_Basics motion={motion} />,
   chapter2: <Chapter2_Keyframes motion={motion} />,
+  chapter3: <Chapter3_HovertapEffect motion={motion} />
 };
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <select value={chapter} id="chap" onChange={(e) => setChapter(e.target.value)}>
             <option value="chapter1">1 Framer Basics</option>
             <option value="chapter2">2 Framer keyframes animations</option>
+            <option value="chapter3">3 Framer Hover & Tap Animate</option>
           </select>
         </div>
 
