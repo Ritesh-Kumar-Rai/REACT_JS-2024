@@ -15,4 +15,8 @@ h1 {
   border-radius: 15px;
   background-color: palevioletred;
   box-shadow: 15px 15px 15px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
 }

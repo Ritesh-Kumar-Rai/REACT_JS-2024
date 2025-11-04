@@ -2,10 +2,11 @@ import { motion } from "motion/react";
 import './App.css';
 import { useState } from "react";
 import Chapter1_Basics from "./chapters/Chapter1_Basics";
+import Chapter2_Keyframes from "./chapters/Chapter2_Keyframes";
 
 const chapters = {
   chapter1: <Chapter1_Basics motion={motion} />,
-  chapter2: '2'
+  chapter2: <Chapter2_Keyframes motion={motion} />,
 };
 
 function App() {
