@@ -13,3 +13,26 @@ body {
   background-color: rgb(4, 4, 24);
   color: white;
 }
+
+.container {
+  margin-block: 3rem;
+  padding: 1rem;
+  background-color: rgb(28, 27, 27);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 15px;
+}
+
+.container > select {
+  padding: 5px;
+  border-radius: 6px;
+}
+
+main {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: rgb(28, 27, 27);
+  border-radius: 15px;
+  box-shadow: 15px 15px 15px rgb(12, 12, 12);
+}
